@@ -1,0 +1,7 @@
+{
+  "name": "demonhacks19-frontend2",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

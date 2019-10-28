@@ -1,0 +1,42 @@
+<ion-content>
+  <form #registerForm="ngForm" novalidate>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked" color="primary">E-mail</ion-label>
+        <ion-input [(ngModel)]="consumer.email" name="email" type="email" inputmode='email' #email="ngModel" spellcheck="false" autocapitalize="off" autofocus="true"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" color="primary">Password</ion-label>
+        <ion-input [(ngModel)]="consumer.password" name="password" type="password" #password="ngModel" spellcheck="true" autocapitalize="on"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" color="primary">Age</ion-label>
+        <ion-input [(ngModel)]="consumer.age" name="age" type="text" #age="ngModel" spellcheck="true" autocapitalize="on"
+          required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" color="primary">Gender</ion-label>
+        <ion-input [(ngModel)]="consumer.gender" name="gender" type="text" #gender="ngModel" spellcheck="true" autocapitalize="on">
+        </ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" color="primary">Location</ion-label>
+        <br/>
+        <img src="https://maps.googleapis.com/maps/api/staticmap?center=Magnificent+Mile,Chicago,IL&zoom=13&size=600x300&maptype=roadmap&markers=color:red%7C41.889345,-87.6267064&key=AIzaSyC3uQlV0y2IocWGTm-x_zYTyNiE3BtNvRY"/>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="onSubmit(registerForm)" type="submit" expand="block">Submit</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>
